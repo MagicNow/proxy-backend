@@ -25,7 +25,7 @@ const server = http.createServer((req, res) => {
   // You can define here your custom logic to handle the request
   // and then proxy the request.
   proxy.web(req, res, {
-    target: 'https://academic.oup.com/annonc/issue'
+    target: process.env['URL_SITE']
   });
 });
 
