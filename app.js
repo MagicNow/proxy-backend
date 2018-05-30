@@ -3,8 +3,8 @@ const httpProxy = require('http-proxy');
 
 // Create a proxy server with custom application logic
 const proxy = httpProxy.createProxyServer({
-    xfwd: true,
-    changeOrigin: true
+  xfwd: true,
+  changeOrigin: true
 });
 
 // To modify the proxy connection before data is sent, you can listen
@@ -15,10 +15,10 @@ const proxy = httpProxy.createProxyServer({
 // you need to modify the proxy request before the proxy connection
 // is made to the target.
 proxy.on('proxyReq', (proxyReq, req, res, options) => {
-    proxyReq.setHeader('x-forwarded-host', process.env['X-FORWARDED-HOST']);
-    proxyReq.setHeader('x-forwarded-proto', process.env['X-FORWARDED-PROTO']);
-    proxyReq.setHeader('x-forwarded-port', process.env['X-FORWARDED-PORT']);
-    proxyReq.setHeader('x-forwarded-for', process.env['X-FORWARDED-FOR']);
+  proxyReq.setHeader('x-forwarded-host', process.env['X-FORWARDED-HOST']);
+  proxyReq.setHeader('x-forwarded-proto', process.env['X-FORWARDED-PROTO']);
+  proxyReq.setHeader('x-forwarded-port', process.env['X-FORWARDED-PORT']);
+  proxyReq.setHeader('x-forwarded-for', process.env['X-FORWARDED-FOR']);
 });
 
 const server = http.createServer((req, res) => {
