@@ -11,7 +11,7 @@ Mini servidor para configuração dos **x-forwarded-***
 
 * Clone o repositório: `git clone git@github.com:lucassant0s/sboc-proxy.git`
 * Acesse o diretório do projeto: `cd sboc-proxy`
-* Instalação das dependências `npm install ou yarn install`
+* Instalação das dependências `yarn install`
 
 ## Utilização
 
@@ -28,7 +28,7 @@ X-FORWARDED-FOR= <host>
 
 ## Execução
 
-* `npm start ou yarn start`
+* `yarn start`
 
 ## About
 
