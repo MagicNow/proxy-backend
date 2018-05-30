@@ -24,6 +24,8 @@ X-FORWARDED-HOST= <host> : <port> opcional
 X-FORWARDED-PROTO= <protocol>
 X-FORWARDED-PORT= <port> opcional
 X-FORWARDED-FOR= <host>
+
+URL_SITE= <url>
 ```
 
 ## Execução
