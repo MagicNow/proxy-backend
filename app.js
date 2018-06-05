@@ -1,5 +1,5 @@
 const http = require('http'),
-const httpProxy = require('http-proxy');
+httpProxy = require('http-proxy');
 
 // Create a proxy server with custom application logic
 const proxy = httpProxy.createProxyServer({
